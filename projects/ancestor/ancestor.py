@@ -43,7 +43,7 @@ def earliest_ancestor(ancestors, starting_node):
     visited = set()
     #initialize path length
     path_length = 1
-    #sets relative as -1 if no parent
+    #set relative as -1 if no parent
     earliest_known_ancestor = -1
 
     #while queue is greater than 0
@@ -60,12 +60,12 @@ def earliest_ancestor(ancestors, starting_node):
 
         # checks for need to update
         if len(path) >= path_length and current_node <earliest_known_ancestor or len(path) > path_length:
-            #updates path length
+            #update path length
             path_length = len(path)
-            #updates earliest known ancestor
+            #update earliest known ancestor
             earliest_known_ancestor = current_node
 
-        # then add a path to its parent to the back of the queue
+        # add a path to its parent to the back of the queue
         for parent in get_ancestor(ancestors, current_node):
             #copy path
             path_copy = list(path)
