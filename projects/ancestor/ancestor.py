@@ -2,7 +2,7 @@
 
 # Step 1 - describe the problem in graph terms
 # Step 2 - build the graph
-# Step 3 - traverse the graph (bfs/dfs or bft/dft)
+# Step 3 - traverse the graph (bfs/dfs or bft)
 
 ### STEP 1 
 # Each node represents a person
@@ -59,7 +59,7 @@ def earliest_ancestor(ancestors, starting_node):
             visited.add(current_node)
 
         # checks for need to update
-        if len(path) >= path_length and current_node <earliest_known_ancestor or len(path) > path_length:
+        if len(path) >= path_length and current_node < earliest_known_ancestor or len(path) > path_length:
             #update path length
             path_length = len(path)
             #update earliest known ancestor
